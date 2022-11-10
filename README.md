@@ -42,16 +42,29 @@ A Parallel in Parallel out (PIPO) shift register is used as a temporary storage 
 
 ### Procedure
 
+Step1:
+Create a new Quartus II project.
 
+Step2:
+Create a new file in the Quartus II where name of the module is name of the project.
+
+Step3:
+Declare a function for each logical circuit.
+
+Step4:
+For each definition give end module.
+
+Step5:
+Run RTL simulation and timing diagram.
 
 
 ### PROGRAM 
-
+\*
 Program for  Implementation-of Shift-registers-using-verilog-
 
 Developed by: Gayathri A
 
-RegisterNumber:  212221230028
+RegisterNumber:  212221230028 */
 
 # SIPO:
 ```
@@ -124,11 +137,23 @@ endmodule
 
 ### TIMING DIGRAMS FOR SHIFT REGISTERS
 
+# SIPO :
+
+![sipo2](https://user-images.githubusercontent.com/94154854/201102366-b2206fa0-e6ac-4c22-820d-d43ba4e260a6.png)
+
+# PISO:
+
+![piso2](https://user-images.githubusercontent.com/94154854/201102420-e071a50a-30b3-4de1-b4a2-154c119a0a63.png)
+ 
+# PIPO :
+
+![pipo2](https://user-images.githubusercontent.com/94154854/201102480-0bc77896-2ff6-44e4-849e-0520a01d8aa9.png)
 
 
 
 
 
 
+### RESULTS :
 
-### RESULTS 
+Therefore PISO,PIPO,PISO are implemented succesfully using verilog and validated their functionality using their functional tables.
