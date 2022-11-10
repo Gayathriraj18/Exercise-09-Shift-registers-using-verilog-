@@ -48,18 +48,71 @@ A Parallel in Parallel out (PIPO) shift register is used as a temporary storage 
 ### PROGRAM 
 /*
 Program for  Implementation-of Shift-registers-using-verilog-
-Developed by: 
-RegisterNumber:  
+Developed by: Gayathri A
+RegisterNumber:  212221230028
 */
+# SIPO:
+```
+module sipo(SI,Clk,PO);
+input SI,Clk;
+output[0:7]PO;
+reg[0:7]temp;
+always@(posedge Clk)
+begin
+temp={temp[0:6],SI};
+end
+assign PO=temp;
+endmodule
+```
 
-
+# PISO:
+```
+module piso(Clk,PI,load,SO);
+input Clk,load;
+input[3:0]PI;
+output reg SO;
+reg[3:0]temp;
+always@(posedge Clk)
+begin
+if(load)
+temp<=PI;
+else
+begin
+SO<=temp[3];
+temp<={temp[2:0],1'b0};
+end
+end
+endmodule
+```
+# PIPO:
+```
+module pipo(PO,PI,Clk);
+input Clk;
+input [3:0]PI;
+output reg[3:0]PO;
+always@(posedge Clk)
+begin
+PO=PI;
+end
+endmodule
+```
 
 
 
 
 ### RTL LOGIC  REGISTERS   
 
+# SIPO:
 
+![sipo1](https://user-images.githubusercontent.com/94154854/201100237-231dd184-0f24-41bd-8549-fa9a01ccdac6.png)
+
+# PISO:
+
+![piso1](https://user-images.githubusercontent.com/94154854/201100310-e7649dd9-ccbf-442c-bd84-c0c3a1ad8a60.png)
+
+# PIPO:
+
+![pipo1](https://user-images.githubusercontent.com/94154854/201100393-6d7ed3c1-78a1-4e53-8a01-bd3164c594a5.png)
 
 
 
